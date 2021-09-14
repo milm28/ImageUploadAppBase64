@@ -1,0 +1,57 @@
+-- --------------------------------------------------
+-- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
+-- --------------------------------------------------
+-- Date Created: 09/14/2021 13:16:40
+-- Generated from EDMX file: C:\Users\Milm\Desktop\ImageUploadAppByte\ImageUploadAppByte\ImageUploadAppByte\Models\Model1.edmx
+-- --------------------------------------------------
+
+SET QUOTED_IDENTIFIER OFF;
+GO
+USE [db_img];
+GO
+IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
+GO
+
+-- --------------------------------------------------
+-- Dropping existing FOREIGN KEY constraints
+-- --------------------------------------------------
+
+
+-- --------------------------------------------------
+-- Dropping existing tables
+-- --------------------------------------------------
+
+IF OBJECT_ID(N'[dbo].[tbl_file]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[tbl_file];
+GO
+
+-- --------------------------------------------------
+-- Creating all tables
+-- --------------------------------------------------
+
+-- Creating table 'tbl_file'
+CREATE TABLE [dbo].[tbl_file] (
+    [file_id] int IDENTITY(1,1) NOT NULL,
+    [file_name] nvarchar(max)  NOT NULL,
+    [file_ext] nvarchar(max)  NOT NULL,
+    [file_base6] nvarchar(max)  NOT NULL
+);
+GO
+
+-- --------------------------------------------------
+-- Creating all PRIMARY KEY constraints
+-- --------------------------------------------------
+
+-- Creating primary key on [file_id] in table 'tbl_file'
+ALTER TABLE [dbo].[tbl_file]
+ADD CONSTRAINT [PK_tbl_file]
+    PRIMARY KEY CLUSTERED ([file_id] ASC);
+GO
+
+-- --------------------------------------------------
+-- Creating all FOREIGN KEY constraints
+-- --------------------------------------------------
+
+-- --------------------------------------------------
+-- Script has ended
+-- --------------------------------------------------
